@@ -29,7 +29,6 @@ public class Board {
         if (isCorrectField(x, y)) consumer.accept(fields[x][y], new Point(x, y));
     }
 
-    //TODO: change BiConsumer to maybe Function or w/e with ? types after learning generics
     private void executeOnAllFieldsAround(int x, int y, BiConsumer<Field, Point> consumer) {
         for (int i = x - 1; i <= x + 1; i++) {
             for (int j = y - 1; j <= y + 1; j++) {
